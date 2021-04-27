@@ -1,0 +1,18 @@
+version: '2'
+services:
+  nginx:
+    container_name: video-upstream-nginx
+    image: ossboard/video-upstream-nginx:latest
+    ports:
+      - 80:80
+      - 8085:8085
+    volumes:
+      - ./nginx.conf:/usr/local/nginx/conf/nginx.conf
+      - /data/volume1:/opt/static/volume1
+      - /data/volume2:/opt/static/volume2
+      - /data/volume3:/opt/static/volume3
+    networks:
+      - backend
+networks:
+  backend:
+    driver: bridge
