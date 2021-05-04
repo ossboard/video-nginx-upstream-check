@@ -17,7 +17,6 @@
 The image is available on Docker Hub:
 https://hub.docker.com/r/ossboard/video-health-nginx/.
 
-
 ### build
 ``` 
 docker build -t ossboard/video-upstream-nginx:latest . 
